@@ -7,12 +7,10 @@ import os
 # Иначе переименнует файл в "проверен"
 
 if __name__ == "__main__":
-    sum = 0
     with open("ind3file.txt", "r", encoding="utf-8") as fileptr:
-        for i in fileptr:
-            sum += 1
+        lines = fileptr.readlines()
 
-    if sum < 5:
+    if len(lines) < 5:
         os.remove("ind3file.txt")
     else:
         os.rename("ind3file.txt", "Проверен.txt")

@@ -12,20 +12,11 @@ if __name__ == "__main__":
         print("Ошибка в количестве аргументов", file=sys.stderr)
         sys.exit(1)
 
-    sum = 0
-
     filename = sys.argv[1]
     try:
         with open(filename, "r", encoding="utf-8") as fileptr:
-            for i in fileptr:
-                sum += 1
-
-            fileptr.seek(0)
-            for i in fileptr:
-                if sum <= 10:
-                    print(i)
-                else:
-                    sum -= 1
+            lines = fileptr.readlines()
+            print(" ".join(lines[-10:]))
 
     except FileNotFoundError:
         print("Такого файла не существует!", file=sys.stderr)
