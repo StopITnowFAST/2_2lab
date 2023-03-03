@@ -8,7 +8,7 @@ import os
 
 if __name__ == "__main__":
     sum = 0
-    with open("ind3file.txt", "r", encoding='utf-8') as fileptr:
+    with open("ind3file.txt", "r", encoding="utf-8") as fileptr:
         for i in fileptr:
             sum += 1
 

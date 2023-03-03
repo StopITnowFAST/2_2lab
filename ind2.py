@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     filename = sys.argv[1]
     try:
-        with open(filename, "r", encoding='utf-8') as fileptr:
+        with open(filename, "r", encoding="utf-8") as fileptr:
             for i in fileptr:
                 sum += 1
 

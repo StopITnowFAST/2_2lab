@@ -8,7 +8,7 @@ if __name__ == "__main__":
     print("Введите искомое слово")
     word = input()
 
-    with open("ind1file.txt", "r", encoding='utf-8') as fileptr:
+    with open("ind1file.txt", "r", encoding="utf-8") as fileptr:
         for i in fileptr:
             if i.find(word) != -1:
                 print(i)
